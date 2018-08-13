@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="DH.dao.VoteDao">
+
+
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="DH.entity.Vote">
+        <id column="vote_id" property="voteId"/>
+        <result column="user_name" property="user.userName"/>
+        <result column="type_id" property="voteType.typeId"/>
+        <result column="vote_quantity" property="voteQuantity"/>
+        <result column="vote_turnout" property="voteTurnout"/>
+        <result column="end_time" property="endTime"/>
+        <result column="description" property="description"/>
+        <result column="vote_change" property="voteChange"/>
+        <result column="state" property="state"/>
+    </resultMap>
+
+    <!--添加投票信息-->
+    <insert id="AddVote" keyProperty="pojo.voteId" useGeneratedKeys="true">
+        insert into vote(user_name, type_id, vote_name, vote_quantity,  end_time,description) values
+        (#{pojo.user.userName},#{pojo.voteType.typeId},#{pojo.voteName},#{pojo.voteQuantity},#{pojo.endTime},#{pojo.description})
+    </insert>
+
+    <!--更新是否多选-->
+    <update id="voteChange">
+        update vote set vote_change = #{voteChange} where vote_id = #{voteId}
+    </update>
+
+    <!--查询所有的vote-->
+    <select id="votes" resultMap="AllColumnMap">
+    select * from  vote
+</select>
+    <!--通过id查询改name-->
+    <select id="selectVoteName" resultMap="AllColumnMap">
+        select * from vote where vote_id = #{voteId}
+    </select>
+    <!--更新是否能够投票状态-->
+    <update id="updateTime">
+        update vote set state = 0 where end_time &lt; #{voteTime}
+    </update>
+
+<update id="updateSum" >
+        update vote set vote_turnout = #{voteTurnout}
+        where vote_id = #{voteId}
+</update>
+
+
+
+</mapper>
+

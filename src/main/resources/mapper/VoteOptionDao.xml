@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="DH.dao.VoteOptionDao">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="DH.entity.VoteOption">
+        <result column="option_id" property="optionId"/>
+        <result column="vote_id" property="vote.voteId" />
+        <result column="option_name" property="optionName"/>
+        <result column="option_number" property="optionNumber"/>
+    </resultMap>
+
+    <!--插入投票项-->
+    <insert id="AddOptions" keyProperty="optionId" useGeneratedKeys="true">
+insert into vote_option(vote_id, option_name) values
+<foreach collection="list" item="voteOption" separator=",">
+    (#{voteOption.vote.voteId},#{voteOption.optionName})
+</foreach>
+    </insert>
+    <!--通过id查询所有的投票项-->
+    <select id="voteOptions" resultMap="AllColumnMap">
+select * from  vote_option where vote_id = #{voteId}
+    </select>
+
+
+    <select id="voteNoOptions" resultMap="AllColumnMap">
+       select * from vote_option
+       where vote_id = #{voteId} and option_id not in 
+       <foreach collection="voteLogList" item="optionId" open = "(" separator="," close= ")">
+           #{optionId}
+       </foreach>
+    </select>
+
+<update id="voteOptionSum">
+    update vote_option set option_number = #{optionNumber}
+        where option_id = #{optionId}
+</update>
+</mapper>
+

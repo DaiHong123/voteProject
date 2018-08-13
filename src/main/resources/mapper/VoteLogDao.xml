@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="DH.dao.VoteLogDao">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="DH.entity.VoteLog">
+        <result column="vote_id" property="vote.voteId" />
+        <result column="option_id" property="voteOption.optionId" />
+        <result column="user_name" property="user.userName" />
+        <result column="log_date" property="logDate"/>
+    </resultMap>
+
+
+    <!--通过投票id和用户名查询是否有记录-->
+    <select id="voteLog" resultMap="AllColumnMap">
+        select * from votelog where vote_id = #{vote.voteId} and user_name = #{user.userName}
+    </select>
+
+    <insert id="insertLog">
+        insert into votelog(vote_id, option_id, user_name, log_date) values
+        <foreach collection="list" item="voteLog" separator=",">
+            (#{voteLog.vote.voteId},#{voteLog.voteOption.optionId},#{voteLog.user.userName},#{voteLog.logDate})
+        </foreach>
+    </insert>
+
+    <select id="addVoteSum" resultType="int">
+        select count(*)
+        from votelog
+        where vote_id = #{voteId}
+    </select>
+
+    <select id="addVoteOptionSum" resultType="int">
+        select count(*)
+        from votelog
+        where option_id = #{optionId}
+    </select>
+
+</mapper>
+

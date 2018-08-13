@@ -1,0 +1,185 @@
+.countdownHolder{
+	font: 23px/0.8 'Open Sans', sans-serif;
+    height: 89px;
+}
+.position{
+    display: inline-block;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+    font-weight: 700;
+    font-size: 1.7em;
+	font-family: 'Open Sans', sans-serif;
+}
+.digit {
+    color: #fff;
+    letter-spacing: -6px;
+    left: 0px;
+    bottom: 0;
+    position: absolute;
+    font-weight: bold;
+}
+.countDays{
+    background:transparent;
+	/* display:none !important;*/ 
+	border-right: 1px dotted #fff;
+	border-left: 1px dotted #fff;
+}
+.countDiv0{ /* display:none !important;*/ }
+.countHours {
+    background: transparent;
+	border-right: 1px dotted #fff;
+}
+.countDiv1{}
+.countMinutes {
+    background:  transparent;
+	border-right: 1px dotted #fff;
+}
+.countDiv2{}
+.countSeconds{
+    background: transparent;
+	border-right: 1px dotted #fff;
+}
+.countDiv{
+	/*--display:inline-block;
+	width:16px;
+	height:1.6em;
+	position:relative;--*/
+	display:none;
+}
+.countDiv:after{
+	top:0.9em;
+}
+/*--responsive design--*/
+@media(max-width:1080px){
+	.position {
+		font-size: 1.5em;
+	}
+}
+
+@media(max-width:991px){
+	.position {
+		font-size: 1.4em;
+		width:50px;
+	}
+}
+@media(max-width:900px){
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 155px;
+	}
+}
+@media(max-width:800px){
+	.position {
+		margin-top: 10px;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 120px;
+	}
+	#counter {
+		height: 125px;
+	}
+}
+@media(max-width:736px){
+	.position {
+		font-size: 1.2em;
+		width: 40px;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 110px;
+	}
+	.footer p {
+		letter-spacing: 1px;
+	}
+}
+@media(max-width:667px){
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 100px;
+	}
+}
+@media(max-width:640px){
+	.content {
+		width: 70%;
+	}
+}
+@media(max-width:600px){
+	.content {
+		width: 79%;
+		padding: 0;
+	}
+}
+@media(max-width:568px){
+	.position {
+		font-size: 1.1em;
+		width: 40px;
+	}
+	#counter {
+		height: 100px;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 90px;
+	}
+}
+@media(max-width:480px){
+	.position {
+		font-size: 1em;
+		width: 35px;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 78px;
+	}
+}
+@media(max-width:414px){
+	.digit {
+		font-size: 35px;
+		left: 4px;
+	}
+	.position {
+		width: 22px;
+		height: 38px;
+	}
+	.position {
+		width: 23px;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 66px;
+		height: 90px;
+	}
+	#counter {
+		margin: 11% auto;
+	}
+}
+@media(max-width:384px){
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 60px;
+	}
+}
+@media(max-width:375px){
+	.content {
+		width: 80%;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		margin-right: 10px;
+		margin-left: 0px;
+	}
+}
+@media(max-width:320px){
+	.content {
+		width: 93%;
+		padding: 30px 10px 0;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		width: 55px;
+	}
+	.footer p {
+		letter-spacing: 0px;
+	}
+	.countDays,.countHours, .countMinutes, .countSeconds  {
+		border-right: none;
+		border-left: none;
+	}
+	#counter {
+		margin: 2% auto;
+	}
+}
+/*--/responsive design--*/

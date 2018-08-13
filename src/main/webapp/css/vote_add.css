@@ -1,0 +1,25 @@
+.sidebarlistb select {
+    float: left;
+    padding: 0px;
+    height: 23px;
+    width: 50px;
+    border: 0px none;
+    text-align: center;
+    background: transparent none repeat scroll 0% 0%;
+    margin: 3px 5px;
+}
+
+.sidebarlistb select option {
+    float: left;
+    line-height: 23px;
+    height: 23px;
+    text-align: center;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    font-size:15px;
+    border-radius: 4px;
+    padding: 3px;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(173, 173, 173);
+    width: 71px;
+    text-decoration: none;
+}

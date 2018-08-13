@@ -1,0 +1,109 @@
+/* ::::: https://www.wjx.cn/css/index.css?v=3 ::::: */
+
+* { box-sizing: border-box; }
+*::before, *::after { box-sizing: border-box; }
+html { font-family: "microsoft yahei","Lucida Grande",Helvetica,Arial,Verdana,sans-serif; height: 100%; }
+form { height: 100%; }
+body { font-family: "microsoft yahei"; margin: 0px; font-size: 12px; color: rgb(51, 51, 51); min-width: 1024px; }
+audio:not([controls]) { display: none; height: 0px; }
+a { background: transparent none repeat scroll 0% 0%; text-decoration: none; color: rgb(48, 166, 245); }
+a:active, a:hover { outline: 0px none; color: rgb(48, 166, 245); }
+h1, h2, h3, h4, h5 { margin: 0px; font-weight: normal; }
+h1 { font-size: 24px; }
+dl, dt, dd, ul, li, ol, p, form, img { padding: 0px; margin: 0px; list-style: outside none none; border: medium none; }
+img { border: 0px none; max-width: 100%; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0px; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0px none; padding: 0px; }
+input { line-height: normal; }
+input:focus, textarea:focus, select:focus { outline: medium none; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0px; }
+:-moz-placeholder { color: rgb(191, 191, 191); }
+*::-moz-placeholder { color: rgb(191, 191, 191); }
+fieldset { border: 0px solid rgb(192, 192, 192); margin: 0px; padding: 0px; }
+.btn { display: inline-block; padding: 0px 12px; margin-bottom: 0px; font-size: 12px; font-weight: normal; line-height: 1; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; -moz-user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; }
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus { outline: medium none; outline-offset: -2px; }
+.btn:hover, .btn:focus, .btn.focus { text-decoration: none; }
+.btn:active, .btn.active { background-image: none; outline: 0px none; }
+.btn-default { color: rgb(255, 255, 255); background-color: rgb(48, 166, 245); border-color: rgb(48, 166, 245); }
+.btn-default:hover { color: rgb(255, 255, 255); background-color: rgb(0, 120, 200); border-color: rgb(0, 120, 200); }
+.btn-lg { border-radius: 6px; line-height: 28px; }
+.pull-right { float: right ! important; }
+.pull-left { float: left ! important; }
+.clearfix::after { content: " "; display: block; clear: both; height: 0px; }
+.clearfix {  }
+.hidden { display: none ! important; }
+.caret-lf::before { position: absolute; content: ""; top: -5px; left: 2px; width: 0px; height: 0px; border-style: solid; border-width: 5px 8px 5px 0px; border-color: transparent rgb(247, 248, 249) transparent transparent; }
+.caret-rf::before { position: absolute; content: ""; top: -5px; right: 2px; width: 0px; height: 0px; border-style: solid; border-width: 5px 0px 5px 8px; border-color: transparent transparent transparent rgb(247, 248, 249); }
+.caret-top::before { position: absolute; content: ""; top: 1px; right: -4px; width: 0px; height: 0px; border-style: solid; border-width: 0px 4px 5px; border-color: transparent transparent rgb(247, 248, 249); }
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .container { width: 100%; }
+}
+@media (min-width: 1600px) {
+  .container { width: 1540px; }
+}
+@media (min-width: 1366px) {
+  .container-fixed { width: 1306px; }
+}
+.icon { margin: 0px 6px 0px 0px; display: inline-block; vertical-align: middle; }
+.spinner-list ul .caret-top::before { border-color: transparent transparent rgb(255, 255, 255); }
+.spinner-list ul > :first-child + li { border-top-left-radius: 6px; border-top-right-radius: 6px; }
+.fp-enabled, .fp-viewing { position: relative; width: 100%; height: 100%; }
+.fp-enabled, .fp-viewing { width: 100%; height: 100%; }
+.fullpage-wrapper { position: relative; width: 100%; height: 100%; }
+.fullpage-main { position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 1; background-image: url('../images/bacg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; }
+@media (max-width: 1600px) {
+  .fullpage-wrapper .pic_source { bottom: 40px; right: 20px; }
+}
+@media (max-width: 1152px) {
+  .fullpage-wrapper .pic_source { bottom: 20px; right: 20px; }
+}
+.fullpage-wrapper .full-head { position: relative; z-index: 2; width: 100%; padding: 0px 60px; }
+.fullpage-wrapper .logo { margin-top: 36px; }
+.fullpage-wrapper .member { margin-top: 36px; }
+.fullpage-wrapper .member .btn { font-size: 18px; color: rgb(255, 255, 255); line-height: 2; margin-left: 20px; border: 1px solid rgb(255, 255, 255); border-radius: 100px; background-color: transparent; }
+.fullpage-wrapper .member .btn:hover { border-width: 2px; }
+.fullpage-wrapper .member .login, .fullpage-wrapper .member .register { width: 90px; height: 40px; }
+.fullpage-wrapper .member .back-wjx { width: 120px; height: 40px; }
+.fullpage-wrapper .member .btn :hover { border-width: 2px; }
+.validate-box { width: 480px; position: fixed; top: 50%; left: 50%; margin-top: -260px; margin-left: -240px; z-index: 2; border-radius: 14px; background-color: rgb(255, 255, 255); }
+.validate-box .validate-wrapper, .validate-box .submit-wrapper { padding: 0px 50px; }
+.validate-box .validate-caption { font-size: 24px; line-height: 24px; font-weight: bold; color: rgb(250, 145, 17); padding: 40px 0px; text-align: left; }
+.validate-box .validate-wrapper ul li { position: relative; width: 100%; margin-bottom: 16px; }
+.validate-box .validate-wrapper ul li:last-child { margin-bottom: 0px; }
+.validate-box .validate-wrapper .icon { width: 20px; height: 20px; position: absolute; left: 16px; top: 12px; }
+.validate-box .validate-wrapper .user-icon { background: transparent url('../images/user.png') no-repeat scroll center center; }
+.validate-box .validate-wrapper .password-icon { background: transparent url('../images/password.png') no-repeat scroll center center; }
+.validate-box .validate-wrapper .validate-input { width: 100%; height: 46px; line-height: 1.4; font-size: 14px; padding: 10px 0px 10px 46px; border-radius: 100px; border: 1px solid rgb(230, 230, 230); background: rgb(255, 255, 255) none repeat scroll 0% 0% ! important; }
+.validate-box .validate-wrapper .validate-input:focus { outline: medium none; border-color: rgb(250, 145, 30); }
+.validate-box .validate-wrapper label[class="error"]::before, .validate-box .validate-wrapper label[class="error"] .before { content: ""; display: block; position: absolute; top: 11px; left: -5px; border-right: 5px dashed rgb(255, 97, 97); border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.validate-box .validate-wrapper .red::before, .validate-box .validate-wrapper .red .before { content: ""; display: block; position: absolute; top: 11px; left: -5px; border-right: 5px dashed rgb(255, 97, 97); border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.validate-box .validate-wrapper .blue::before, .validate-box .validate-wrapper .blue .before { content: ""; display: block; position: absolute; top: 11px; left: -5px; border-right: 5px dashed rgb(48, 166, 245); border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.validate-box .validate-wrapper .green::before, .validate-box .validate-wrapper .green .before { content: ""; display: block; position: absolute; top: 11px; left: -5px; border-right: 5px dashed rgb(129, 199, 99); border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+:-moz-placeholder { color: rgb(191, 191, 191); }
+*::-moz-placeholder { color: rgb(191, 191, 191); }
+.validate-box .validate-wrapper .remember-box, .validate-box .validate-wrapper .clause-box { overflow: hidden; font-size: 14px; margin-top: 26px; margin-bottom: 17px; }
+.validate-box .validate-wrapper .automatic-box { color: rgb(102, 102, 102); }
+.validate-box .validate-wrapper .remember-box .get-back { color: rgb(102, 102, 102); text-decoration: underline; }
+.validate-box .validate-wrapper .remember-box .get-back:hover { color: rgb(250, 145, 30); }
+input.submitbutton { width: 100% ! important; height: 46px ! important; font-size: 20px ! important; border-radius: 100px ! important; background-color: rgb(250, 145, 30); border: medium none ! important; }
+input.submitbutton:hover { background-color: rgb(240, 130, 0); }
+.validate-box .submit-wrapper input[name="login-button"]:hover, .submitbutton :hover { background-color: rgb(240, 130, 0); }
+.validate-box .submit-wrapper .register-now, .log-on { font-size: 18px; color: rgb(250, 145, 30); margin: 16px 0px 26px; display: block; }
+.validate-box .submit-wrapper .register-now:hover, .log-on:hover { color: rgb(240, 130, 0); }
+.validate-box .submit-wrapper .third-party-txt { font-size: 14px; color: rgb(204, 204, 204); margin-bottom: 5px; border-top: 1px solid rgb(204, 204, 204); }
+.validate-box .submit-wrapper .third-party-txt em { position: relative; top: -11px; font-style: normal; padding: 0px 6px; background-color: rgb(255, 255, 255); }
+.validate-box .submit-wrapper .third-party-login .penguin-box { margin-bottom: 30px; }
+.validate-box .submit-wrapper .third-party-login .penguin-icon { width: 56px; height: 56px; margin-right: 0px; background: transparent url('../images/qq.png') no-repeat scroll center center; }
+.validate-box .submit-wrapper .third-party-login .penguin-icon:hover { background: transparent url('../images/qq-hover.png') no-repeat scroll center center; }
+.feelings-wrapper { display: none; position: absolute; z-index: 2; right: 30px; bottom: 30px; text-align: left; }
+.feelings-wrapper > * { color: rgb(164, 164, 165); line-height: 1; }
+@media (min-width: 1280px) {
+  .feelings-wrapper { display: block; right: 30px; bottom: 30px; }
+}
+@media (min-width: 1600px) {
+  .feelings-wrapper { bottom: 40px; right: 60px; }
+}
+.validate-box .submit-wrapper .third-party-login .wxpenguin-icon { width: 56px; height: 56px; margin-right: 0px; background: transparent url('../images/weixin-nor.png') no-repeat scroll center center; }
+.validate-box .submit-wrapper .third-party-login .wxpenguin-icon:hover { background: transparent url('../images/weixin.png') no-repeat scroll center center; }

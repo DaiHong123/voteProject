@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--它会像一个检查员，对进入DispatcherServlet的URL进行筛查，如果发现是静态资源的请求，
+    就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处理。-->
+    <mvc:default-servlet-handler />
+
+<!--配置页面访问信息-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+    <property name="prefix" value="/WEB-INF/jsp/" />
+    <property name="suffix" value=".jsp" />
+    </bean>
+
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/vote/*"/>
+            <bean class="DH.Interceptor.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--扫描注解包-->
+
+    <context:component-scan base-package="DH.controller" />
+
+    <!--配置访问直接路径-->
+    <mvc:view-controller path="/login" view-name="/login" />
+
+<!--加载静态资源-->
+    <mvc:resources mapping="/js/**" location="js/" />
+    <mvc:resources mapping="/css/**" location="css/" />
+    <mvc:resources mapping="/images/**" location="images/" />
+    <mvc:resources mapping="/assets/**" location="assets/" />
+
+<!--会自动注册RequestMappingHandlerMapping与RequestMappingHandlerAdapter两个Bean,
+这是Spring MVC为@Controller分发请求所必需的，并且提供了数据绑定支持，
+@NumberFormatannotation支持，@DateTimeFormat支持,@Valid支持读写XML的支持（JAXB）和读写JSON的支持（默认Jackson）等功能。-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+</beans>
